@@ -15,34 +15,34 @@ const customParamValue = getQueryParam('custom_param');
 
 
 
-var valueDayExport = firebase.database().ref(customParamValue).child("date of exportation");
-valueTemp.on("value", (snap) => {
+var valueDayExport = firebase.database().ref(customParamValue).child("key1");
+valueDayExport.on("value", (snap) => {
   console.log("Day: " + snap.val());
   document.getElementById("day").innerHTML = snap.val();
 });
 
 
 
-var valueOrgin = firebase.database().ref(customParamValue).child("orgin");
-valueTemp.on("value", (snap) => {
-  console.log("the orgin: " + snap.val());
-  document.getElementById("orgin").innerHTML = snap.val() ;
-});
+// var valueOrgin = firebase.database().ref(customParamValue).child("orgin");
+// valueOrgin.on("value", (snap) => {
+//   console.log("the orgin: " + snap.val());
+//   document.getElementById("orgin").innerHTML = snap.val() ;
+// });
 
-var valueHum = firebase.database().ref(customParamValue).child("durian's name");
-valueHum.on("value", (snap) => {
-  console.log("durian's name: " + snap.val());
-  document.getElementById("name").innerHTML = snap.val() ;
-});
-// 
-var valueHum = firebase.database().ref(customParamValue).child("weight");
-valueHum.on("value", (snap) => {
-  console.log("trọng lượng: " + snap.val());
-  document.getElementById("weight").innerHTML = snap.val() ;
-});
+// var valueHum = firebase.database().ref(customParamValue).child("durian's name");
+// valueHum.on("value", (snap) => {
+//   console.log("durian's name: " + snap.val());
+//   document.getElementById("name").innerHTML = snap.val() ;
+// });
+// // 
+// var valueHum = firebase.database().ref(customParamValue).child("weight");
+// valueHum.on("value", (snap) => {
+//   console.log("trọng lượng: " + snap.val());
+//   document.getElementById("weight").innerHTML = snap.val() ;
+// });
 
-var valuepH = firebase.database().ref(customParamValue).child("type");
-valuepH.on("value", (snap) => {
-  console.log("Type: " + snap.val());
-  document.getElementById("type").innerHTML = snap.val() ;
-});
+// var valuepH = firebase.database().ref(customParamValue).child("type");
+// valuepH.on("value", (snap) => {
+//   console.log("Type: " + snap.val());
+//   document.getElementById("type").innerHTML = snap.val() ;
+// });
