@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url(/Durian/assets/background.png);
+    background-image: url(/assets/background.jpg);
     background-size: cover;
     display: grid;
     place-items: center;
@@ -24,7 +24,7 @@ body {
 
 .card {
     display: flex;
-    /* flex-wrap: nowrap; */
+    flex-wrap: nowrap;
     border-radius: 1.5rem;
     background-color: white;
     cursor: pointer;
