@@ -1,0 +1,51 @@
+:root {
+    --background: #D8E3FA;
+    --gray: #EAEAEC;
+    --primary: #29283F;
+    --primary-violet: #7370F4;
+}
+
+body {
+    background-image: url(/Durian/assets/background.png);
+    background-size: cover;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100vh;
+    font-size: 16px;
+    padding: 1.5rem;
+    font-family: Poppins, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.card {
+    display: flex;
+    flex-wrap: nowrap;
+    border-radius: 1.5rem;
+    background-color: white;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.3s;
+    min-width: 20rem;
+    min-height: 17.5rem;
+}
+
+.card:hover {
+    box-shadow: rgba(0, 0, 0, 0.35) 
+        0px 5px 15px;
+}
+
+.background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.infomation {
+    padding-top: 25px;
+    padding-left: 25px;
+}
