@@ -53,12 +53,26 @@ valueType.on("value", (snap) => {
 });
 
 
+// // Reference to a specific image file
+// const storageRef = storage.ref();
+// const imgRef = storageRef.child(customParamValue +".JPG");
+
+// // Get the download URL
+// imgRef.getDownloadURL().then((url) => {
+//     // Insert url into an <img> tag to display the image
+//     const imgElement = document.getElementById('IMG');
+//     imgElement.src = url;
+// }).catch((error) => {
+//     console.error("Error getting download URL:", error);
+// });
+
 // Reference to a specific image file
 const storageRef = storage.ref();
-const imgRef = storageRef.child(customParamValue +".JPG");
+const imgRef = storageRef.child("Durian_bg.jpg");
 
 // Get the download URL
 imgRef.getDownloadURL().then((url) => {
+    console.log('File available at', url);
     // Insert url into an <img> tag to display the image
     const imgElement = document.getElementById('IMG');
     imgElement.src = url;
