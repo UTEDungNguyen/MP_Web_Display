@@ -5,6 +5,28 @@
     --primary-violet: #7370F4;
 }
 
+/* Animation for the card */
+@keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+  
+/* Animation for the image */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 body {
     background-image: url(https://firebasestorage.googleapis.com/v0/b/mechatronic-project-af507.appspot.com/o/Durian_bg.jpg?alt=media&token=94dce1c7-c272-4cf8-b884-f1e452182c89);
     background-size: cover;
@@ -23,6 +45,7 @@ body {
 }
 
 .card {
+    animation: slideIn 1s ease-out;
     display: flex;
     flex-wrap: nowrap;
     border-radius: 1.5rem;
@@ -30,13 +53,14 @@ body {
     cursor: pointer;
     overflow: hidden;
     transition: all 0.3s;
-    min-width: 20rem;
+    min-width: 50rem;
     min-height: 17.5rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 15px;
 }
 
 .card:hover {
-    box-shadow: rgba(0, 0, 0, 0.35) 
-        0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 10px 20px, rgba(0, 0, 0, 0.2) 0px 6px 6px;
+    transform: translateY(-10px);
 }
 
 .background img {
@@ -46,6 +70,7 @@ body {
 }
 
 .resize-image {
+    animation: fadeIn 2s ease-in;
     width: 100%;
     height: auto;
 }
@@ -53,4 +78,71 @@ body {
 .infomation {
     padding-top: 25px;
     padding-left: 25px;
+}
+
+.infomation p{
+    opacity: 0;
+    animation: textFadeIn 2s ease-in forwards;
+}
+
+.infomation h2 {
+    opacity: 0;
+    animation: textFadeIn 2s ease-in forwards;
+    animation-delay: 0.5s;
+}
+
+@keyframes textFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+}
+
+.infomation
+p:nth-child(1) {
+    animation-delay: 1s;
+}
+  
+.infomation p:nth-child(2) {
+    animation-delay: 1.5s;
+}
+  
+.infomation p:nth-child(3) {
+    animation-delay: 2s;
+}
+  
+.infomation p:nth-child(4) {
+    animation-delay: 2.5s;
+}
+  
+.infomation p:nth-child(5) {
+    animation-delay: 3s;
+}
+
+.infomation p:nth-child(6) {
+    animation-delay: 3.5s;
+}
+
+.infomation p:nth-child(7) {
+    animation-delay: 4s;
+}
+
+.infomation p:nth-child(8) {
+    animation-delay: 4.5s;
+}
+
+/* Ensure the modal image takes full width and is centered */
+.modal-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.modal-body img {
+    max-width: 100%;
+    height: auto;
 }
