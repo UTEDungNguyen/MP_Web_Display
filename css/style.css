@@ -6,7 +6,7 @@
 }
 
 body {
-    background-image: url(/Durian/assets/background.png);
+    background-image: url(https://firebasestorage.googleapis.com/v0/b/mechatronic-project-af507.appspot.com/o/Durian_bg.jpg?alt=media&token=94dce1c7-c272-4cf8-b884-f1e452182c89);
     background-size: cover;
     display: grid;
     place-items: center;
@@ -24,7 +24,7 @@ body {
 
 .card {
     display: flex;
-    /* flex-wrap: nowrap; */
+    flex-wrap: nowrap;
     border-radius: 1.5rem;
     background-color: white;
     cursor: pointer;
@@ -43,6 +43,11 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.resize-image {
+    width: 100%;
+    height: auto;
 }
 
 .infomation {
