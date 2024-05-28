@@ -16,6 +16,12 @@ valueDayExport.on("value", (snap) => {
   document.getElementById("date").innerHTML = snap.val();
 });
 
+var valueTimeExport = firebase.database().ref(customParamValue).child("Time_Export");
+valueTimeExport.on("value", (snap) => {
+  console.log("Time: " + snap.val());
+  document.getElementById("time").innerHTML = snap.val();
+});
+
 var valueOrgin = firebase.database().ref(customParamValue).child("Orgin");
 valueOrgin.on("value", (snap) => {
   console.log("the orgin: " + snap.val());
